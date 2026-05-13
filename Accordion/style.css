@@ -1,0 +1,26 @@
+/* Базовый стиль кнопки аккордеона */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px; 
+    width: 60%;
+    text-align: left;
+    border: none;                /* Убираем стандартную рамку */
+    outline: none;               /* Убираем обводку при фокусе */
+    transition: 0.4s;            /* Плавный переход для всех анимируемых свойств */
+}
+
+/* Активное состояние кнопки (когда панель открыта) и при наведении */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Панель с содержимым */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;            /* Скрываем содержимое, выходящее за пределы */
+    transition: max-height 0.2s ease-out; /* Плавное изменение высоты */
+}
